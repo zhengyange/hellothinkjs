@@ -1,0 +1,41 @@
+{
+  "name": "thinkjs-application",
+  "description": "application created by thinkjs",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node www/development.js",
+    "compile": "babel --presets es2015-loose,stage-1 --plugins transform-runtime src/ --out-dir app/ --source-maps",
+    "watch-compile": "node -e \"console.log('<npm run watch-compile> no longer need, use <npm start> command direct.');console.log();\"",
+    "watch": "npm run watch-compile",
+    "postcompile": "webpack --config www/webpack.config.js --process --colors --display-error-details --prod"
+  },
+  "dependencies": {
+    "thinkjs": "2.2.x",
+    "babel-runtime": "6.x.x",
+    "source-map-support": "0.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.x.x",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "6.x.x",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-es2015-loose": "6.x.x",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-1": "6.x.x",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "glob": "^7.0.5",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.8.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "repository": "",
+  "license": "MIT"
+}
